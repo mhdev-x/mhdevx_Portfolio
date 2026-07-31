@@ -22,7 +22,7 @@
 
 /* --- THEME CLAIR --- */
 body.light-theme {
-    --bg-deep: #05070D;
+    --bg-deep: #F7F8FB;
     --bg-surface: #FFFFFF;
     --bg-surface-2: #EEF1F7;
     --border: #DCE1EC;
@@ -150,6 +150,7 @@ body.light-theme .topbar {
     border: 2px solid var(--border);
     margin-bottom: 24px;
     display: block;
+    background-color: #05070D;
 }
 
 .algo-block {

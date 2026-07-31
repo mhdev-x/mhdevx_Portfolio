@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (boutonTheme) {
             boutonTheme.innerHTML = theme === "dark"
                 ? '<i class="fa-solid fa-sun" style="color: var(--accent-signal);"></i>'
-                : '<i class="fa-solid fa-moon" style="color: var(--bg-deep);"></i>';
+                : '<i class="fa-solid fa-moon" style="color: #05070D;"></i>';
         }
     };
 
