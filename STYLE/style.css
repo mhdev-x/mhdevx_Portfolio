@@ -127,8 +127,8 @@ body.light-theme .topbar {
 }
 
 .imgProfile {
-    width: 96px;
-    height: 96px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--border);
