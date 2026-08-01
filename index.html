@@ -13,15 +13,24 @@
 
 <nav class="topbar">
     <span class="brand">MHDevX</span>
+
+    <input type="checkbox" id="navToggle" class="nav-toggle-input">
+
     <ul class="navlinks">
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
-        <i class="fa-solid fa-moon" style="color: var(--bg-deep);"></i>
-    </button>
+
+    <div class="topbar-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
+            <i class="fa-solid fa-moon" style="color: var(--bg-deep);"></i>
+        </button>
+        <label for="navToggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </div>
 </nav>
 
 <!-- ================= HERO : ouverture de l'algorithme ================= -->
@@ -51,7 +60,7 @@
     <p class="eyebrow">01 — Contexte</p>
     <h2 class="section-title">À propos</h2>
     <p class="prose">
-        Étudiant en Génie Logiciel à l'ISI Keur Massar (Dakar, Sénégal), je passe mes journées entre
+        Première année en Génie Logiciel à l'ISI Keur Massar (Dakar, Sénégal), je passe mes journées entre
         le langage C, l'algorithmique en pseudocode, le SQL et le développement web. En dehors des cours,
         je conçois des projets personnels pour mettre en pratique ce que j'apprends — de la gestion de bibliothèque
         en C à des interfaces web complètes. Je contribue aussi à <strong>NextGen Devs</strong>, une communauté
