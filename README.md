@@ -2,7 +2,7 @@
 
 Portfolio personnel présentant mon parcours et mes projets en tant qu'étudiant en Génie Logiciel à l'ISI Keur Massar (Dakar, Sénégal).
 
-🔗 **Site en ligne :** [mhdev-x.github.io/portfolio](https://mhdev-x.github.io/portfolio)
+🔗 **Site en ligne :** [mhdev-x.github.io/mhdevx_Portfolio/](https://mhdev-x.github.io/mhdevx_Portfolio/)
 
 ## À propos
 
