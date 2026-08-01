@@ -178,6 +178,7 @@ body.light-theme .topbar {
     border: 2px solid var(--border);
     margin-bottom: 24px;
     display: block;
+    background-color:#0F1626 ;
 }
 
 .algo-block {
