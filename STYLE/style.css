@@ -74,11 +74,12 @@ body.theme-clair .barre-nav {
     background: rgba(247, 248, 251, 0.85);
 }
 
-.marque {
+.marque, a {
     font-family: var(--font-display);
     font-weight: 700;
     font-size: 1.2rem;
     letter-spacing: -0.02em;
+    text-decoration: none;
 }
 
 /* Case à cocher invisible qui pilote l'ouverture du menu (pas de JS) */
