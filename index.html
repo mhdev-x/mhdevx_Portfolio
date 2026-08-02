@@ -11,55 +11,55 @@
 </head>
 <body>
 
-<nav class="topbar">
-    <span class="brand">MHDevX</span>
+<nav class="barre-nav">
+    <span class="marque">MHDevX</span>
 
-    <input type="checkbox" id="navToggle" class="nav-toggle-input">
+    <input type="checkbox" id="menuCase" class="case-menu">
 
-    <ul class="navlinks">
+    <ul class="liens-nav">
         <li><a href="#apropos">À propos</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <div class="topbar-actions">
-        <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
+    <div class="actions-barre">
+        <button id="boutonTheme" class="bouton-theme" aria-label="Changer de thème">
             <i class="fa-solid fa-moon" style="color: var(--bg-deep);"></i>
         </button>
-        <label for="navToggle" class="nav-toggle-label" aria-label="Ouvrir le menu">
+        <label for="menuCase" class="etiquette-menu" aria-label="Ouvrir le menu">
             <i class="fa-solid fa-bars"></i>
         </label>
     </div>
 </nav>
 
 <!-- ================= HERO : ouverture de l'algorithme ================= -->
-<header class="hero">
-    <img class="imgProfile" src="MEDIAS/mohamed.bathily.png" alt="Photo de Mohamed Bathily">
+<header class="accueil">
+    <img class="photoProfil" src="MEDIAS/mohamed.bathily.png" alt="Photo de Mohamed Bathily">
 
-    <div class="algo-block">
-        <p class="algo-line"><span class="kw">Programme</span> Portfolio_MohamedBathily</p>
-        <p class="algo-line"><span class="kw">Var</span></p>
-        <p class="algo-line indent">identite : Chaine <span class="arrow">&lt;----</span> "Mohamed Bathily"</p>
-        <p class="algo-line indent">alias : Chaine <span class="arrow">&lt;----</span> "MHDevX"</p>
-        <p class="algo-line indent">statut : Chaine <span class="arrow">&lt;----</span> "Étudiant Génie Logiciel, ISI Keur Massar"</p>
+    <div class="bloc-algo">
+        <p class="ligne-algo"><span class="motcle">Programme</span> Portfolio_MohamedBathily</p>
+        <p class="ligne-algo"><span class="motcle">Var</span></p>
+        <p class="ligne-algo indent">identite : Chaine <span class="fleche">&lt;----</span> "Mohamed Bathily"</p>
+        <p class="ligne-algo indent">alias : Chaine <span class="fleche">&lt;----</span> "MHDevX"</p>
+        <p class="ligne-algo indent">statut : Chaine <span class="fleche">&lt;----</span> "Étudiant Génie Logiciel, ISI Keur Massar"</p>
     </div>
 
-    <h1 class="hero-title">Mohamed Bathily</h1>
-    <p class="hero-subtitle">Étudiant en Génie Logiciel — je construis des outils utiles, du C au Web.</p>
+    <h1 class="titre-accueil">Mohamed Bathily</h1>
+    <p class="sous-titre-accueil">Étudiant en Génie Logiciel — je construis des outils utiles, du C au Web.</p>
 
-    <div class="hero-actions">
-        <a href="#projets" class="btn btn-signal">Voir mes projets</a>
+    <div class="actions-accueil">
+        <a href="#projets" class="bouton bouton-signal">Voir mes projets</a>
     </div>
 
-    <p class="algo-line start-marker"><span class="kw">Debut</span></p>
+    <p class="ligne-algo marqueur-debut"><span class="motcle">Debut</span></p>
 </header>
 
 <!-- ================= A PROPOS ================= -->
 <section id="apropos" class="section">
-    <p class="eyebrow">01 — Contexte</p>
-    <h2 class="section-title">À propos</h2>
-    <p class="prose">
+    <p class="surtitre">01 — Contexte</p>
+    <h2 class="titre-section">À propos</h2>
+    <p class="texte">
         Étudiant en Génie Logiciel à l'ISI Keur Massar (Dakar, Sénégal), je passe mes journées entre
         le langage C, l'algorithmique en pseudocode, le SQL et le développement web. En dehors des cours,
         je conçois des projets personnels pour mettre en pratique ce que j'apprends — de la gestion de bibliothèque
@@ -70,74 +70,74 @@
 
 <!-- ================= COMPETENCES : declarations de variables ================= -->
 <section id="competences" class="section">
-    <p class="eyebrow">02 — Var</p>
-    <h2 class="section-title">Compétences</h2>
+    <p class="surtitre">02 — Var</p>
+    <h2 class="titre-section">Compétences</h2>
 
-    <div class="skills-grid">
-        <div class="skill-card">
-            <p class="skill-decl">langage_C : Niveau <span class="arrow">&lt;----</span> Avancé</p>
-            <p class="skill-desc">Structures, modularité, gestion de fichiers, projets modulaires (CMake, CLion)</p>
+    <div class="grille-competences">
+        <div class="carte-competence">
+            <p class="declaration-competence">langage_C : Niveau <span class="fleche">&lt;----</span> Avancé</p>
+            <p class="description-competence">Structures, modularité, gestion de fichiers, projets modulaires (CMake, CLion)</p>
         </div>
-        <div class="skill-card">
-            <p class="skill-decl">web : Ensemble <span class="arrow">&lt;----</span> {HTML, CSS, JS}</p>
-            <p class="skill-desc">DOM, localStorage, classList, formulaires, thèmes clair/sombre</p>
+        <div class="carte-competence">
+            <p class="declaration-competence">web : Ensemble <span class="fleche">&lt;----</span> {HTML, CSS, JS}</p>
+            <p class="description-competence">DOM, localStorage, classList, formulaires, thèmes clair/sombre</p>
         </div>
-        <div class="skill-card">
-            <p class="skill-decl">bases_donnees : Type <span class="arrow">&lt;----</span> SQL</p>
-            <p class="skill-desc">Schémas, jointures, agrégations, Supabase</p>
+        <div class="carte-competence">
+            <p class="declaration-competence">bases_donnees : Type <span class="fleche">&lt;----</span> SQL</p>
+            <p class="description-competence">Schémas, jointures, agrégations, Supabase</p>
         </div>
-        <div class="skill-card">
-            <p class="skill-decl">algorithmique : Fondation <span class="arrow">&lt;----</span> Solide</p>
-            <p class="skill-desc">Pseudocode, structures de données, tri</p>
+        <div class="carte-competence">
+            <p class="declaration-competence">algorithmique : Fondation <span class="fleche">&lt;----</span> Solide</p>
+            <p class="description-competence">Pseudocode, structures de données, tri</p>
         </div>
-        <div class="skill-card">
-            <p class="skill-decl">outils : Ensemble <span class="arrow">&lt;----</span> {Git, CLion, VS Code}</p>
-            <p class="skill-desc">Versioning, environnements Mac/Windows, déploiement GitHub Pages</p>
+        <div class="carte-competence">
+            <p class="declaration-competence">outils : Ensemble <span class="fleche">&lt;----</span> {Git, CLion, VS Code}</p>
+            <p class="description-competence">Versioning, environnements Mac/Windows, déploiement GitHub Pages</p>
         </div>
-        <div class="skill-card">
-            <p class="skill-decl">design : Contribution <span class="arrow">&lt;----</span> NextGen Devs</p>
-            <p class="skill-desc">Identité visuelle, logos, affiches d'évènements communautaires</p>
+        <div class="carte-competence">
+            <p class="declaration-competence">design : Contribution <span class="fleche">&lt;----</span> NextGen Devs</p>
+            <p class="description-competence">Identité visuelle, logos, affiches d'évènements communautaires</p>
         </div>
     </div>
 </section>
 
 <!-- ================= PROJETS ================= -->
 <section id="projets" class="section">
-    <p class="eyebrow">03 — Exécution</p>
-    <h2 class="section-title">Projets</h2>
+    <p class="surtitre">03 — Exécution</p>
+    <h2 class="titre-section">Projets</h2>
 
-    <div class="projects-grid">
+    <div class="grille-projets">
 
-        <article class="project-card">
-            <div class="project-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <article class="carte-projet">
+            <div class="icone-projet"><i class="fa-solid fa-laptop-code"></i></div>
             <h3>GL HUB</h3>
             <p>Plateforme web centralisant les cours, TD et ressources de Génie Logiciel pour toute la promo ISI Keur Massar.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-            <a href="https://mhdev-x.github.io/GL-HUB" target="_blank" class="project-link">Voir le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <div class="etiquettes"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a href="https://mhdev-x.github.io/GL-HUB" target="_blank" class="lien-projet">Voir le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </article>
 
-        <article class="project-card">
-            <div class="project-icon"><i class="fa-solid fa-book"></i></div>
+        <article class="carte-projet">
+            <div class="icone-projet"><i class="fa-solid fa-book"></i></div>
             <h3>Bibliothèque Islamique</h3>
             <p>Système modulaire de gestion de bibliothèque en C — livres, membres, emprunts, auteurs et catégories, avec validation stricte des saisies.</p>
-            <div class="tags"><span>C</span><span>CMake</span><span>CLion</span></div>
-            <a href="https://github.com/mhdev-x/Bibliotheque_Islamique/" class="project-link" target="_blank">Code source <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <div class="etiquettes"><span>C</span><span>CMake</span><span>CLion</span></div>
+            <a href="https://github.com/mhdev-x/Bibliotheque_Islamique/" class="lien-projet" target="_blank">Code source <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </article>
 
-        <article class="project-card">
-            <div class="project-icon"><i class="fa-solid fa-comments"></i></div>
+        <article class="carte-projet">
+            <div class="icone-projet"><i class="fa-solid fa-comments"></i></div>
             <h3>JOKKO</h3>
             <p>Interface de chat de groupe développée en équipe (DevClub) — thèmes dynamiques et gestion d'état côté client.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-            <a href="https://github.com/insrobane4-tech/JOKKO/" class="project-link" target="_blank">Code source<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <div class="etiquettes"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a href="https://github.com/insrobane4-tech/JOKKO/" class="lien-projet" target="_blank">Code source<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </article>
 
-        <article class="project-card">
-            <div class="project-icon"><i class="fa-solid fa-futbol"></i></div>
+        <article class="carte-projet">
+            <div class="icone-projet"><i class="fa-solid fa-futbol"></i></div>
             <h3>Simulateur Coupe du Monde</h3>
             <p>Simulateur de scores avec bascule de thème clair/sombre et changement dynamique d'arrière-plan.</p>
-            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-            <a href="https://mhdev-x.github.io/random-score-generator/" target="_blank" class="project-link">Voir le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <div class="etiquettes"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a href="https://mhdev-x.github.io/random-score-generator/" target="_blank" class="lien-projet">Voir le site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </article>
 
     </div>
@@ -145,32 +145,32 @@
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section">
-    <p class="eyebrow">04 — Fin</p>
-    <h2 class="section-title">Contact</h2>
-    <p class="prose">Une question, un projet, une envie de collaborer ? Écris-moi directement.</p>
+    <p class="surtitre">04 — Fin</p>
+    <h2 class="titre-section">Contact</h2>
+    <p class="texte">Une question, un projet, une envie de collaborer ? Écris-moi directement.</p>
 
-    <div class="contact-grid">
-        <a class="contact-card" href="https://www.linkedin.com/in/mhdev-x/" target="_blank">
+    <div class="grille-contact">
+        <a class="carte-contact" href="https://www.linkedin.com/in/mhdev-x/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
             <span>LinkedIn</span>
         </a>
-        <a class="contact-card" href="https://www.github.com/mhdev-x/" target="_blank">
+        <a class="carte-contact" href="https://www.github.com/mhdev-x/" target="_blank">
             <i class="fa-brands fa-github"></i>
             <span>GitHub</span>
         </a>
-        <a class="contact-card" href="mailto:mohamedbathily08632@gmail.com" target="_blank">
+        <a class="carte-contact" href="mailto:mohamedbathily08632@gmail.com" target="_blank">
             <i class="fa-solid fa-at"></i>
             <span>E-Mail</span>
         </a>
-        <a class="contact-card" href="https://wa.me/221771216386/" target="_blank">
+        <a class="carte-contact" href="https://wa.me/221771216386/" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
             <span>WhatsApp</span>
         </a>
-        <a class="contact-card" href="https://www.instagram.com/mhdev_x/" target="_blank">
+        <a class="carte-contact" href="https://www.instagram.com/mhdev_x/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
             <span>Instagram</span>
         </a>
-        <a class="contact-card" href="https://www.snapchat.com/@mhdev_x/" target="_blank">
+        <a class="carte-contact" href="https://www.snapchat.com/@mhdev_x/" target="_blank">
             <i class="fa-brands fa-snapchat"></i>
             <span>Snapchat</span>
         </a>
@@ -178,9 +178,9 @@
     </div>
 </section>
 
-<footer class="site-footer">
-    <p class="algo-line end-marker"><span class="kw">Fin</span></p>
-    <p class="copyright">&copy; 2026 Mohamed Bathily — MHDevX</p>
+<footer class="pied-page">
+    <p class="ligne-algo marqueur-fin"><span class="motcle">Fin</span></p>
+    <p class="droits-auteur">&copy; 2026 Mohamed Bathily — MHDevX</p>
 </footer>
 
 <script src="theme.js"></script>
