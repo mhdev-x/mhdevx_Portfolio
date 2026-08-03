@@ -183,6 +183,7 @@ body.theme-clair .barre-nav {
     margin-bottom: 24px;
     display: block;
     background-color:#0F1626 ;
+    transition: .4s;
 }
 
 .bloc-algo {
@@ -242,11 +243,81 @@ body.theme-clair .barre-nav {
 }
 
 .titre-accueil {
+    display: flex;
+    gap: 15px;
     font-family: var(--font-display);
     font-size: clamp(2.4rem, 6vw, 3.6rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 12px;
+}
+.prenom, .nom{
+    display:inline-flex;
+}
+
+/* Animation Nom */
+.titre-accueil span:not(.prenom):not(.nom){
+    display:inline-block;
+    opacity:0;
+    animation: arrivee 0.9s cubic-bezier(.22,1,.36,1) forwards;
+    animation-delay:calc(var(--i) * 90ms + .35s);
+}
+.nom span{
+    animation-delay:calc(var(--i) * 90ms + .8s);
+}
+
+.titre-accueil .espace-titre{
+    width:.6em;
+}
+
+
+/* Directions */
+.titre-accueil span:not(.prenom):not(.nom):nth-child(4n+1){
+    transform:translateY(-50px) rotate(-10deg);
+}
+
+.titre-accueil span:not(.prenom):not(.nom):nth-child(4n+2){
+    transform:translateX(-50px) rotate(-10deg);
+}
+
+.titre-accueil span:not(.prenom):not(.nom):nth-child(4n+3){
+    transform:translateY(50px) rotate(10deg);
+}
+
+.titre-accueil span:not(.prenom):not(.nom):nth-child(4n){
+    transform:translateX(50px) rotate(10deg);
+}
+
+
+@keyframes arrivee{
+
+    0%{
+        opacity:0;
+    }
+
+    65%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:1;
+        transform:translate(0,0) rotate(0deg) scale(1);
+    }
+}
+
+
+.titre-accueil > span:not(.espace-titre){
+    transition:.3s;
+}
+
+
+@media (hover:hover){
+
+.titre-accueil span:not(.prenom):not(.nom):hover{
+    color:var(--accent-signal);
+    transform:translateY(-8px) scale(1.15);
+}
+
 }
 
 .sous-titre-accueil {
@@ -325,7 +396,6 @@ body.theme-clair .barre-nav {
     color: var(--text-primary);
 }
 
-/* --- COMPETENCES --- */
 /* --- COMPETENCES --- */
 .sous-titre-groupe {
     font-family: var(--font-code);
@@ -531,5 +601,19 @@ body.theme-clair .barre-nav {
 
     .case-menu:checked ~ .liens-nav {
         max-height: 320px;
+    }
+    .titre-accueil{
+        flex-direction: column;
+        gap: 0;
+        font-size: clamp(2rem, 10vw, 2.8rem);
+        line-height:1.1;
+        align-items: center;
+    }
+
+    .titre-accueil > span{
+        animation-duration:0.7s;
+    }
+    .prenom, .nom{
+        display:flex;
     }
 }
