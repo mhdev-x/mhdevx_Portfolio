@@ -18,7 +18,7 @@ html{
     --accent-signal: #E8A33D;
     --accent-signal-text: #05070D;
 
-    --font-display: 'Space Grotesk', sans-serif;
+    --font-display: 'Audiowide', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-code: 'JetBrains Mono', monospace;
 }
@@ -79,10 +79,51 @@ body.theme-clair .barre-nav {
 
 .marque, a {
     font-family: var(--font-display);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 1.2rem;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     text-decoration: none;
+}
+
+/* --- Animation MHDevX (version reduite du principe du titre-accueil) --- */
+.marque span {
+    display: inline-block;
+    opacity: 0;
+    animation: arriveeMarque 1.3s cubic-bezier(.22,1,.36,1) forwards;
+    animation-delay: calc(var(--i) * 120ms + 0.35s);
+    transition: 0.25s;
+}
+
+.marque span:nth-child(3n+1) {
+    transform: translateY(-14px) rotate(-8deg);
+}
+
+.marque span:nth-child(3n+2) {
+    transform: translateY(14px) rotate(8deg);
+}
+
+.marque span:nth-child(3n) {
+    transform: translateX(10px) rotate(-6deg);
+}
+
+@keyframes arriveeMarque {
+    0% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@media (hover: hover) {
+    .marque span:hover {
+        color: var(--accent-signal);
+        transform: translateY(-3px) scale(1.15);
+    }
 }
 
 /* Case à cocher invisible qui pilote l'ouverture du menu (pas de JS) */
@@ -168,22 +209,35 @@ body.theme-clair .barre-nav {
 
 /* --- HERO --- */
 .accueil {
-    max-width: 780px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 80px 20px 60px;
     text-align: left;
 }
 
+.accueil-entete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.accueil-texte {
+    flex: 1;
+    min-width: 0;
+}
+
 .photoProfil {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 275px;
+    height: 350px;
+    border-radius: 30px;
     object-fit: cover;
     border: 2px solid var(--border);
-    margin-bottom: 24px;
     display: block;
     background-color:#0F1626 ;
     transition: .4s;
+    flex-shrink: 0;
 }
 
 .bloc-algo {
@@ -217,12 +271,14 @@ body.theme-clair .barre-nav {
     animation: fadeSlideUp 0.6s ease forwards;
 }
 
-.photoProfil      { animation-delay: 0.05s; }
-.bloc-algo      { animation-delay: 0.15s; }
-.titre-accueil      { animation-delay: 0.3s; }
-.sous-titre-accueil   { animation-delay: 0.4s; }
-.actions-accueil    { animation-delay: 0.5s; }
-.marqueur-debut    { animation-delay: 0.6s; }
+/* Ordre reajuste : photo -> sous-titre -> titre -> Var -> Debut -> affectations -> bouton */
+.photoProfil         { animation-delay: 0.05s; }
+.sous-titre-accueil  { animation-delay: 0.15s; }
+.titre-accueil       { animation-delay: 0.3s; }
+.bloc-algo           { animation-delay: 0.45s; }
+.marqueur-debut      { animation-delay: 0.6s; }
+.bloc-algo-corps      { animation-delay: 0.7s; }
+.actions-accueil     { animation-delay: 0.85s; }
 
 /* --- APPARITION DES SECTIONS (pur CSS, pas de JS) --- */
 .section {
@@ -246,9 +302,9 @@ body.theme-clair .barre-nav {
     display: flex;
     gap: 15px;
     font-family: var(--font-display);
-    font-size: clamp(2.4rem, 6vw, 3.6rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    letter-spacing: 0;
     margin-bottom: 12px;
 }
 .prenom, .nom{
@@ -259,11 +315,11 @@ body.theme-clair .barre-nav {
 .titre-accueil span:not(.prenom):not(.nom){
     display:inline-block;
     opacity:0;
-    animation: arrivee 0.9s cubic-bezier(.22,1,.36,1) forwards;
-    animation-delay:calc(var(--i) * 90ms + .35s);
+    animation: arrivee 1.3s cubic-bezier(.22,1,.36,1) forwards;
+    animation-delay:calc(var(--i) * 120ms + .35s);
 }
 .nom span{
-    animation-delay:calc(var(--i) * 90ms + .8s);
+    animation-delay:calc(var(--i) * 120ms + 1.15s);
 }
 
 .titre-accueil .espace-titre{
@@ -381,8 +437,8 @@ body.theme-clair .barre-nav {
 
 .titre-section {
     font-family: var(--font-display);
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700;
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    font-weight: 400;
     margin-bottom: 24px;
 }
 
@@ -448,6 +504,7 @@ body.theme-clair .barre-nav {
 
 .carte-projet h3 {
     font-family: var(--font-display);
+    font-weight: 400;
     font-size: 1.15rem;
     margin-bottom: 10px;
 }
@@ -551,6 +608,15 @@ body.theme-clair .barre-nav {
     }
     .accueil {
         padding: 50px 20px 40px;
+    }
+    .accueil-entete {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+    }
+    .photoProfil {
+        width: 140px;
+        height: 140px;
     }
     .bloc-algo {
         font-size: 0.75rem;
