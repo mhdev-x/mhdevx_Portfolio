@@ -85,7 +85,7 @@ body.theme-clair .barre-nav {
     text-decoration: none;
 }
 
-/* --- Animation MHDevX (version reduite du principe du titre-accueil) --- */
+/* --- Animation MHDevX --- */
 .marque span {
     display: inline-block;
     opacity: 0;
@@ -126,7 +126,6 @@ body.theme-clair .barre-nav {
     }
 }
 
-/* Case à cocher invisible qui pilote l'ouverture du menu (pas de JS) */
 .case-menu {
     display: none;
 }
@@ -280,7 +279,7 @@ body.theme-clair .barre-nav {
 .bloc-algo-corps      { animation-delay: 0.7s; }
 .actions-accueil     { animation-delay: 0.85s; }
 
-/* --- APPARITION DES SECTIONS (pur CSS, pas de JS) --- */
+
 .section {
     animation: fadeSlideUp 0.7s ease both;
 }
@@ -632,7 +631,7 @@ body.theme-clair .barre-nav {
     }
 }
 
-/* --- MENU MOBILE (burger, CSS pur) --- */
+/* --- MENU MOBILE (burger) --- */
 @media (max-width: 640px) {
     .etiquette-menu {
         display: flex;
