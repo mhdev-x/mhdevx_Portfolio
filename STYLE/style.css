@@ -411,6 +411,17 @@ body.theme-clair .barre-nav {
     box-shadow: 0 8px 20px rgba(232, 163, 61, 0.3);
 }
 
+.bouton-cv {
+    background: var(--accent-structural);
+    color: #FFFFFF;
+    border: 1px solid var(--accent-structural);
+}
+
+.bouton-cv:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-signal);
+}
+
 .marqueur-debut {
     font-family: var(--font-code);
     font-size: 0.85rem;
